@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <section>
       <Nav />
+      <div>AAAAAAAAAAAaaaaaaaaaaaaaaa</div>
     </section>
   );
 };
