@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <section>
       <Nav />
-      <div>AAAAAAAAAAAaaaaaaaaaaaaaaa</div>
+      <div>AAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaa</div>
     </section>
   );
 };
