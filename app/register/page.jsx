@@ -1,5 +1,14 @@
-import Nav from "@components/Nav";
-import React from "react";
+// "use client";
+
+import Nav from "@/components/Nav";
+import Cred from "@components/Cred";
+import { getProviders } from "next-auth/react";
+// import React from "react";
+import Image from "next/image";
+// import { useEffect, useState } from "react";
+// import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+
+// import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { authOptions } from "@app/api/auth/[...nextauth]/route";
@@ -15,9 +24,71 @@ const page = async () => {
   if (session) {
     redirect("/dashboard");
   }
+  // const { data: session } = useSession();
+
+  // const [providers, setProviders] = useState(null);
+  // const [toggleDropdown, setToggleDropdown] = useState(false);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await getProviders();
+  //     setProviders(res);
+  //   })();
+  // }, []);
   return (
-    <div>
+    <div className="flex">
       <Nav />
+      <div className="pt-20 w-full flex flex-row h-screen">
+        <div className="flex w-1/2 bg-slate-300 h-full"></div>
+        <div className="flex flex-col w-1/2 h-full p-20 items-center">
+          <div className="flex flex-col flex-1 items-center w-full gap-4">
+            <h3 className="text-2xl font-semibold">Welcome to Doo-IT!</h3>
+            <p className="text-slate-500">
+              Sign up for free and carve your way to a better future
+            </p>
+            <div className="flex flex-col w-full">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                className="px-4 flex border-2 h-12 border-slate-400 rounded-lg"
+                placeholder="Simon pekarangan"
+              />
+            </div>
+            <div className="flex flex-col w-full">
+              <label htmlFor="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                className="px-4 flex border-2 h-12 border-slate-400 rounded-lg"
+                placeholder="simonhohohihe@gmail.com"
+              />
+            </div>
+            <div className="flex flex-col w-full">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                className="px-4 flex border-2 h-12 border-slate-400 rounded-lg"
+                placeholder="********"
+              />
+            </div>
+            <button
+              type="button"
+              // onClick={() => {}}
+              className="flex px-8 py-2 items-center flex-row border-2 border-slate-400 bg-slate-800 text-slate-100 rounded-full gap-4"
+            >
+              Sign Up
+            </button>
+          </div>
+          <div className="flex flex-row gap-4 items-center w-full my-4">
+            <div className="h-1 bg-slate-600 flex flex-1"></div>
+            <h3>or</h3>
+            <div className="h-1 bg-slate-600 flex flex-1"></div>
+          </div>
+          <Cred />
+        </div>
+      </div>
     </div>
   );
 };

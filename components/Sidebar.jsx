@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col pt-20 items-center gap-4 fixed h-screen w-28 z-0">
+    <div className="flex flex-col pt-20 items-center gap-4 fixed h-screen w-28 z-20">
       <Link
         href="/dashboard"
         className="flex items-center justify-center hover:bg-slate-200 duration-300 p-3 rounded-full h-12 w-12"

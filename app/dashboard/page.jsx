@@ -14,8 +14,8 @@ const page = async () => {
             className="border-4 rounded-lg border-slate-600"
             src={session.user.image}
             alt="profile"
-            height={100}
-            width={100}
+            height={150}
+            width={150}
           />
           <div className="flex flex-col">
             <h3>{session.user.name}</h3>
@@ -25,7 +25,7 @@ const page = async () => {
           <div className="flex flex-row items-center gap-4">
             <svg
               fill="white"
-              className="w-12 h-12 bg-slate-800 rounded-lg py-1 px-2"
+              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
               viewBox="0 0 16 16"
             >
               <path
@@ -43,7 +43,7 @@ const page = async () => {
           <div className="flex flex-row items-center gap-4">
             <svg
               fill="white"
-              className="w-12 h-12 bg-slate-800 rounded-lg py-1 px-2"
+              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
               viewBox="0 0 16 16"
             >
               <path
@@ -61,7 +61,7 @@ const page = async () => {
           <div className="flex flex-row items-center gap-4">
             <svg
               fill="white"
-              className="w-12 h-12 bg-slate-800 rounded-lg py-1 px-2"
+              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
               viewBox="0 0 16 16"
             >
               <path
@@ -78,23 +78,23 @@ const page = async () => {
           </div>
         </div>
         <Link
-          className="bg-slate-800 text-slate-100 p-8 rounded-3xl gap-8 h-64"
+          className="bg-slate-800 text-slate-100 p-8 rounded-3xl gap-8 h-1/2"
           href={"/dashboard/courses"}
         >
           <h2 className="text-3xl font-semibold">Courses</h2>
           <h3 className="text-xl">Explore some materials you need.</h3>
         </Link>
       </div>
-      <div className="flex flex-col w-5/12 gap-8 px-8 justify-between">
+      <div className="flex flex-col w-5/12 gap-8 px-8">
         <Link
-          className="bg-blue-500 text-slate-100 p-8 rounded-3xl gap-8 h-64"
+          className="bg-blue-500 text-slate-100 p-8 rounded-3xl gap-8 flex flex-1"
           href={"/dashboard/exercise"}
         >
           <h2 className="text-3xl font-semibold">Exercise</h2>
           <h3 className="text-xl">Some questions to improve your skill.</h3>
         </Link>
         <Link
-          className="bg-green-500 text-slate-100 p-8 rounded-3xl gap-8 h-64"
+          className="bg-green-500 text-slate-100 p-8 rounded-3xl gap-8 h-1/2"
           href={"/dashboard/forum"}
         >
           <h2 className="text-3xl font-semibold">Discussion Forum</h2>

@@ -1,3 +1,4 @@
+import Course from "@models/Course";
 import Discussion from "@models/Discussion";
 import React from "react";
 
@@ -8,9 +9,10 @@ export const metadata = {
 
 const page = async () => {
   const discussion = await Discussion.find();
+  const courses = await Course.find().select("title");
   return (
-    <div className="flex flex-row h-screen pl-32 pt-20 pb-12">
-      <div className="flex flex-col w-3/12 gap-8">
+    <div className="flex flex-row h-screen pl-32 pt-20 pb-12 relative">
+      <div className="flex flex-col w-3/12 gap-8 fixed">
         <button className="greenButton h-12 text-slate-100 duration-200 rounded-md">
           Create Discussion
         </button>
@@ -21,40 +23,108 @@ const page = async () => {
             <label htmlFor="latest">Latest</label>
           </div>
           <div className="flex flex-row gap-4">
-            <input className="rounded-full" type="checkbox" name="latest" />
-            <label htmlFor="latest">Latest</label>
+            <input className="rounded-full" type="checkbox" name="earliest" />
+            <label htmlFor="earliest">Earliest</label>
           </div>
           <hr className="my-2" />
           <div className="flex flex-row gap-4">
-            <input className="rounded-full" type="checkbox" name="latest" />
-            <label htmlFor="latest">Latest</label>
+            <input className="rounded-full" type="checkbox" name="done" />
+            <label htmlFor="done">Done</label>
           </div>
           <div className="flex flex-row gap-4">
-            <input className="rounded-full" type="checkbox" name="latest" />
-            <label htmlFor="latest">Latest</label>
+            <input className="rounded-full" type="checkbox" name="ongoing" />
+            <label htmlFor="ongoing">Ongoing</label>
           </div>
         </div>
-      </div>
-      {/* {discussion.map((val) => (
-        <div className="flex flex-col">
-          <h3>{val.title}</h3>
-          <p>{val.desc}</p>
-          <p>{val.sender}</p>
-          <p>
-            {val.hashtags.map((val) => (
-              <p>{val}</p>
-            ))}
-          </p>
-          <p>
-            {val.comments.map((val) => (
-              <>
-                <p>{val.sender}</p>
-                <p>{val.comment}</p>
-              </>
-            ))}
-          </p>
+        <div className="flex flex-col flex-1 border-4 gap-2 border-slate-700 rounded-xl py-4 px-8">
+          <h3 className="font-semibold">Popular Keywords</h3>
+          <h3 className="leading-loose">
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #java
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #javascript
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #html
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #css
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #php
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #mysql
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #postgresql
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #java
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #javascript
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #html
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #css
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #php
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #mysql
+            </span>{" "}
+            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
+              #postgresql
+            </span>{" "}
+          </h3>
         </div>
-      ))} */}
+      </div>
+      <div className="flex flex-col w-9/12 px-16 ml-[25%]">
+        <div className="flex flex-row gap-4 items-center mb-8">
+          <input
+            className="flex flex-1 border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
+            type="text"
+            placeholder="Search"
+          />
+          <select
+            name="category"
+            className="flex flex-1 border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
+          >
+            {courses?.map((val) => (
+              <option value={val.title}>{val.title}</option>
+            ))}
+            {/* <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option> */}
+          </select>
+        </div>
+        <div className="flex flex-col gap-4">
+          {discussion.map((val) => (
+            <div className="flex flex-col bg-slate-200 rounded-md py-2 px-4">
+              <div className="flex flex-row">
+                <p>{val.sender}</p>
+              </div>
+              <h3 className="font-semibold">{val.title}</h3>
+              <p>{val.desc}</p>
+              <p className="leading-loose">
+                {val.hashtags.map((val) => (
+                  <>
+                    <span className="bg-slate-300 py-1 px-2 rounded-lg">
+                      {val}
+                    </span>{" "}
+                  </>
+                ))}
+              </p>
+              <p>{val.comments.length} comments</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

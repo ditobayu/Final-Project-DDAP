@@ -39,20 +39,20 @@ function Profile() {
 
   return (
     <div className="flex flex-row h-screen pl-28 pt-20 pb-12">
-      <div className="flex flex-col h-full overflow-y-scroll gap-4 w-7/12">
+      <div className="flex flex-col h-full overflow-y-scroll pr-4 gap-4 w-7/12">
         <h2 className="text-3xl font-semibold">Courses</h2>
         {isLoading ? <h3>Loading...</h3> : null}
         <div className="grid grid-cols-4 gap-4">
           {data?.map((val) => (
             <button
-              className={`flex flex-1 flex-col justify-between border-4 bg-blue-200 rounded-lg p-2 h-52 border-[#0065C1]`}
+              className={`flex flex-1 flex-col justify-between border-4 bg-blue-50 rounded-lg p-2 h-44 border-[#0065C1]`}
               onClick={() => {
                 setTitle(val.title);
                 setDesc(val.desc);
                 setId(val._id);
               }}
             >
-              <h3 className="text-xl">{val.title}</h3>
+              <h3 className="text-lg">{val.title}</h3>
               <div className="flex flex-row justify-end w-full">
                 {/* <Image src={"icon"} width={60} height={60} alt="Course Item" /> */}
               </div>
