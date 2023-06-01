@@ -21,7 +21,7 @@ const Home = () => {
             <br></br>
             <h1 className="text-8xl font-extrabold">Online Course</h1>
             <br></br><br></br>
-            <h2 className="text-4xl font-semibold font-sans font-poppins">Doo-IT provides general knowledge to help increase your insight.</h2>
+            <h2 className="text-4xl font-semibold font-sans">Doo-IT provides general knowledge to help increase your insight.</h2>
           </div>
           <div className="mt-8">
             <button className="bg-green-500 text-white w-1/3 text-3xl py-4 shadow-[5px_6px_0px_rgba(3,147,0,255)] rounded-[50px] hover:w-transition duration-1000 ease-in-out">Get Started</button>
