@@ -31,8 +31,8 @@ const page = (props) => {
       });
   }, []);
   return (
-    <div className="flex flex-row h-screen pl-28 pt-20 pb-12">
-      <div className="flex flex-col w-3/12 py-2 px-8 overflow-y-scroll h-full border-4 border-slate-200 rounded-md">
+    <div className="flex flex-col-reverse md:flex-row h-screen sm:pl-28 pt-20 pb-12">
+      <div className="flex flex-col w-full md:w-4/12 lg:w-3/12 py-2 px-8 md:px-2 lg:px-8 overflow-y-scroll h-full border-4 border-slate-200 rounded-md">
         <h3 className="font-semibold my-2 text-lg">{course.title}</h3>
         <div className="flex flex-col gap-4">
           {course?.data?.map((val, index) => (
@@ -54,10 +54,10 @@ const page = (props) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col w-9/12 px-8 gap-8">
+      <div className="flex flex-col w-full lg:w-9/12 px-2 sm:px-8 gap-8">
         <iframe
           src={activeVideo}
-          className="w-full flex flex-1 rounded-2xl"
+          className="w-full flex h-48 sm:h-72 md:h-96 lg:h-[80%] rounded-2xl"
           title="YouTube video player"
           // frameBorder={0}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -67,7 +67,7 @@ const page = (props) => {
         <div className="flex flex-row justify-between items-center">
           <h3 className="font-semibold text-xl">{title}</h3>
           <div className="flex flex-row items-center gap-4">
-            <button className="blackButton py-2 px-8 rounded-full duration-200 text-white">
+            <button className="blackButton py-2 px-2 text-sm sm:px-8 rounded-full duration-200 text-white">
               Discussion
             </button>
             <button
@@ -79,7 +79,7 @@ const page = (props) => {
                 setTitle(course?.data[indexVideo + 1].title);
                 setDesc(course?.data[indexVideo + 1].desc);
               }}
-              className="greenButton py-2 px-8 rounded-full duration-200 text-white"
+              className="greenButton py-2 px-2 text-sm sm:px-8 rounded-full duration-200 text-white"
             >
               Next
             </button>

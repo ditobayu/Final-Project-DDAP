@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@app/api/auth/[...nextauth]/route";
 import SignOut from "./SignOut";
+import Link from "next/link";
 
 export const metadata = {
   title: "Login",
@@ -29,14 +30,16 @@ const Topbar = async () => {
       </div>
       <div className="flex flex-row gap-4 items-center">
         <h3>Halo, {session.user.name}</h3>
-        <Image
-          className="rounded-full"
-          src={session.user.image}
-          width={48}
-          height={48}
-          alt="Course Item"
-        />
-        <SignOut />
+        <Link href={"/dashboard/profile"}>
+          <Image
+            className="rounded-full"
+            src={session.user.image}
+            width={48}
+            height={48}
+            alt="Course Item"
+          />
+        </Link>
+        {/* <SignOut /> */}
       </div>
     </div>
   );

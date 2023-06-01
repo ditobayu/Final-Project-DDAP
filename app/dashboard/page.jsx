@@ -7,8 +7,8 @@ import Image from "next/image";
 const page = async () => {
   const session = await getServerSession(authOptions);
   return (
-    <div className="flex flex-row h-screen pl-28 pt-20 pb-12">
-      <div className="flex flex-col w-7/12 gap-8 justify-between">
+    <div className="flex flex-col sm:flex-row h-screen sm:pl-28 pt-20 pb-12 gap-4 sm:gap-0">
+      <div className="flex flex-col sm:px-0 px-4 sm:w-7/12 gap-4 sm:gap-8 justify-between">
         <div className="flex flex-row gap-8">
           <Image
             className="border-4 rounded-lg border-slate-600"
@@ -21,7 +21,7 @@ const page = async () => {
             <h3>{session.user.name}</h3>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:items-center justify-between">
           <div className="flex flex-row items-center gap-4">
             <svg
               fill="white"
@@ -85,9 +85,9 @@ const page = async () => {
           <h3 className="text-xl">Explore some materials you need.</h3>
         </Link>
       </div>
-      <div className="flex flex-col w-5/12 gap-8 px-8">
+      <div className="flex flex-col sm:w-5/12 gap-4 sm:gap-8 px-4 sm:px-8 pb-24 sm:pb-0">
         <Link
-          className="bg-blue-500 text-slate-100 p-8 rounded-3xl gap-8 flex flex-1"
+          className="bg-blue-500 text-slate-100 p-8 rounded-3xl gap-8 flex-col flex flex-1"
           href={"/dashboard/exercise"}
         >
           <h2 className="text-3xl font-semibold">Exercise</h2>

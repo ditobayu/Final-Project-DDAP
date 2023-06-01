@@ -11,8 +11,8 @@ const page = async () => {
   const discussion = await Discussion.find();
   const courses = await Course.find().select("title");
   return (
-    <div className="flex flex-row h-screen pl-32 pt-20 pb-12 relative">
-      <div className="flex flex-col w-3/12 gap-8 fixed">
+    <div className="flex flex-col gap-4 md:gap-0 md:flex-row sm:h-screen sm:pl-28 pt-20 pb-12">
+      <div className="flex flex-col w-full md:w-3/12 px-4 md:px-0 gap-8 relative md:fixed">
         <button className="greenButton h-12 text-slate-100 duration-200 rounded-md">
           Create Discussion
         </button>
@@ -36,7 +36,7 @@ const page = async () => {
             <label htmlFor="ongoing">Ongoing</label>
           </div>
         </div>
-        <div className="flex flex-col flex-1 border-4 gap-2 border-slate-700 rounded-xl py-4 px-8">
+        <div className="hidden md:flex flex-col flex-1 border-4 gap-2 border-slate-700 rounded-xl py-4 px-8">
           <h3 className="font-semibold">Popular Keywords</h3>
           <h3 className="leading-loose">
             <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
@@ -84,23 +84,20 @@ const page = async () => {
           </h3>
         </div>
       </div>
-      <div className="flex flex-col w-9/12 px-16 ml-[25%]">
+      <div className="flex flex-col w-full md:w-9/12 px-4 md:px-16 md:ml-[25%]">
         <div className="flex flex-row gap-4 items-center mb-8">
           <input
-            className="flex flex-1 border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
+            className="flex w-full border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
             type="text"
             placeholder="Search"
           />
           <select
             name="category"
-            className="flex flex-1 border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
+            className="flex w-full border-2 border-slate-400 h-[52px] bg-slate-100 px-4 rounded-md"
           >
             {courses?.map((val) => (
               <option value={val.title}>{val.title}</option>
             ))}
-            {/* <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option> */}
           </select>
         </div>
         <div className="flex flex-col gap-4">
