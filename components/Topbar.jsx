@@ -12,7 +12,7 @@ const Topbar = async () => {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="flex flex-row justify-between items-center fixed px-8 h-20 w-full z-10">
+    <div className="bg-white flex flex-row justify-between items-center fixed px-8 h-20 w-full z-30">
       <div className="flex flex-row gap-4 items-center">
         <button className="h-12 w-12 p-2 hover:bg-slate-200 duration-300 rounded-full">
           <svg

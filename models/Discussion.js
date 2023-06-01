@@ -1,27 +1,22 @@
 import { Schema, model, models } from "mongoose";
 
-const DiscussionSchema = new Schema(
-  {
-    title: {
-      type: String,
-    },
-    sender: {
-      type: String,
-    },
-    desc: {
-      type: String,
-    },
-    hashtags: {
-      type: Array,
-    },
-    comments: {
-      type: Array,
-    },
+const DiscussionSchema = new Schema({
+  title: {
+    type: String,
   },
-  {
-    timestamps: true,
-  }
-);
+  sender: {
+    type: String,
+  },
+  desc: {
+    type: String,
+  },
+  hashtags: {
+    type: Array,
+  },
+  comments: {
+    type: Array,
+  },
+});
 
 const Discussion = models.Discussion || model("Discussion", DiscussionSchema);
 

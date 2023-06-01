@@ -1,17 +1,99 @@
+"use client";
+
 import Coursebar from "@components/Coursebar";
 import React from "react";
+import { useState, useEffect } from "react";
 
 export const metadata = {
   title: "Course",
 };
 
 const page = (props) => {
+  const [course, setCourse] = useState([]);
+  const [activeVideo, setActiveVideo] = useState("");
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [indexVideo, setIndexVideo] = useState(0);
+  useEffect(() => {
+    fetch("/api/course/choosed", {
+      headers: {
+        id: props.params.id,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCourse(data);
+        setActiveVideo(data?.data[0].video);
+        setTitle(data?.data[0].title);
+        setDesc(data?.data[0].desc);
+        // setIndexVideo((prev) => prev + 1);
+        console.log(data);
+      });
+  }, []);
   return (
-    <div className="flex flex-col h-screen pl-28 pt-20 pb-12">
-      <Coursebar courseId={props.params.id} />
-      <h3>page{props.params.id}</h3>
+    <div className="flex flex-row h-screen pl-28 pt-20 pb-12">
+      <div className="flex flex-col w-3/12 py-2 px-8 overflow-y-scroll h-full border-4 border-slate-200 rounded-md">
+        <h3 className="font-semibold my-2 text-lg">{course.title}</h3>
+        <div className="flex flex-col gap-4">
+          {course?.data?.map((val, index) => (
+            <button
+              className="bg-slate-200 rounded-xl px-4 py-2"
+              key={index}
+              onClick={() => {
+                setActiveVideo(val.video);
+                setTitle(val.title);
+                setDesc(val.desc);
+                setIndexVideo(index);
+              }}
+            >
+              <h4>
+                {val.title} ({index + 1} / {course?.data?.length})
+              </h4>
+              <h4>{val.title}</h4>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col w-9/12 px-8 gap-8">
+        <iframe
+          src={activeVideo}
+          className="w-full flex flex-1 rounded-2xl"
+          title="YouTube video player"
+          // frameBorder={0}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          // allowFullScreen="true"
+          allowFullScreen={true}
+        ></iframe>
+        <div className="flex flex-row justify-between items-center">
+          <h3 className="font-semibold text-xl">{title}</h3>
+          <div className="flex flex-row items-center gap-4">
+            <button className="blackButton py-2 px-8 rounded-full duration-200 text-white">
+              Discussion
+            </button>
+            <button
+              onClick={() => {
+                setIndexVideo((prev) =>
+                  prev == course?.data.length - 1 ? 0 : prev + 1
+                );
+                setActiveVideo(course?.data[indexVideo + 1].video);
+                setTitle(course?.data[indexVideo + 1].title);
+                setDesc(course?.data[indexVideo + 1].desc);
+              }}
+              className="greenButton py-2 px-8 rounded-full duration-200 text-white"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <h3>{desc}</h3>
+      </div>
     </div>
   );
+  // return (
+  //   <div className="flex flex-col h-screen pl-28 pt-20 pb-12">
+  //     <Coursebar courseId={props.params.id} />
+  //   </div>
+  // );
 };
 
 export default page;
