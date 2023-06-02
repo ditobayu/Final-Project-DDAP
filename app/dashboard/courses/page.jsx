@@ -38,29 +38,27 @@ function Profile() {
   ];
 
   return (
-    <div className="flex flex-row h-screen pl-28 pt-20 pb-12">
-      <div className="flex flex-col h-full overflow-y-scroll pr-4 gap-4 w-7/12">
+    <div className="flex flex-col-reverse sm:flex-row sm:h-screen sm:pl-28 pt-20 pb-12">
+      <div className="flex flex-col h-full overflow-y-scroll px-4 pr-4 gap-4 w-full sm:w-7/12">
         <h2 className="text-3xl font-semibold">Courses</h2>
         {isLoading ? <h3>Loading...</h3> : null}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {data?.map((val) => (
             <button
-              className={`flex flex-1 flex-col justify-between border-4 bg-blue-50 rounded-lg p-2 h-44 border-[#0065C1]`}
+              className={`flex flex-1 flex-col justify-between border sm:border-4 bg-blue-50 rounded-lg p-2 h-24 sm:h-44 border-[#0065C1]`}
               onClick={() => {
                 setTitle(val.title);
                 setDesc(val.desc);
                 setId(val._id);
               }}
             >
-              <h3 className="text-lg">{val.title}</h3>
-              <div className="flex flex-row justify-end w-full">
-                {/* <Image src={"icon"} width={60} height={60} alt="Course Item" /> */}
-              </div>
+              <h3 className="text-xs sm:text-sm md:text-lg">{val.title}</h3>
+              <div className="flex flex-row justify-end w-full"></div>
             </button>
           ))}
         </div>
       </div>
-      <div className="w-5/12 flex gap-4 flex-col px-8">
+      <div className="w-full sm:w-5/12 flex gap-4 flex-col px-8">
         <h2 className="text-3xl font-semibold">Courses Detail</h2>
         <div className="rounded-lg border-4 border-blue-300 w-full h-64"></div>
         <h3>{title}</h3>

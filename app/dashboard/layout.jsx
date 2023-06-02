@@ -21,7 +21,7 @@ export default async function layout({ children }) {
   // }
 
   return (
-    <div>
+    <div className="relative">
       <Topbar />
       <Sidebar />
       {children}

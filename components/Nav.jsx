@@ -26,7 +26,7 @@ const Nav = async () => {
   // }, []);
 
   return (
-    <nav className="flex flex-row items-center fixed w-full justify-between py-4 px-8">
+    <nav className="flex flex-row items-center fixed top-0 w-full bg-white justify-between py-4 px-8">
       <h1 className="text-3xl font-semibold">
         <span className="text-green-400">Doo</span>-
         <span className="text-blue-400">IT</span>
