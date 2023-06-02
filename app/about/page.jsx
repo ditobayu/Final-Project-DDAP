@@ -9,11 +9,11 @@ const page = () => {
   return (
     <div>
       <Nav />
-      <div className="pt-24 flex flex-col px-10">
+      <div className="pt-24 flex flex-col px-24">
         <div className="w-full h-28 bg-slate-500 rounded-xl">
           <img src=""></img>
         </div>
-        <div className="w-full h-screen mt-12 flex flex-row gap-10">
+        <div className="w-full h-screen mt-12 flex flex-row gap-24">
           <div className="w-1/2 bg-slate-300 flex flex-col gap-4">
             <div className="text-center bg-[#d9d9d9] py-6 rounded-2xl border border-black shadow-[7px_8px_0px_rgba(168,168,168,255)]">
               <h1 className="text-5xl font-bold">About Us</h1>
