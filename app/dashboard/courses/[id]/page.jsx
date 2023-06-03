@@ -4,10 +4,6 @@ import Coursebar from "@components/Coursebar";
 import React from "react";
 import { useState, useEffect } from "react";
 
-export const metadata = {
-  title: "Course",
-};
-
 const page = (props) => {
   const [course, setCourse] = useState([]);
   const [activeVideo, setActiveVideo] = useState("");

@@ -1,19 +1,11 @@
 "use client";
 
 import Link from "next/link";
-// import { getServerSession } from "next-auth/next";
-// import { authOptions } from "@app/api/auth/[...nextauth]/route";
 import Image from "next/image";
-// import Image from "next/image";
 import { useEffect, useState } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
-// import { redirect } from "next/navigation";
-
-// const Nav = async () => {
 const Nav = () => {
-  // const session = await getServerSession(authOptions);
-  // console.log(session);
   const { data: session } = useSession();
 
   const [providers, setProviders] = useState(null);

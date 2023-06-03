@@ -7,17 +7,7 @@ import Image from "next/image";
 import google from "@assets/google-color-svgrepo-com.svg";
 
 const Cred = () => {
-  // const providers = await getProviders();
   const [providers, setProviders] = useState();
-  // useEffect(() => {
-  //   (async () => {
-  //     await getProviders().then((val) => {
-  //       setProviders(val);
-  //       console.log(val);
-  //     });
-  //   })();
-  // }, [providers]);
-
   useEffect(() => {
     (async () => {
       const res = await getProviders();
