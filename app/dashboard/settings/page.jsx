@@ -132,7 +132,7 @@ const page = () => {
                 width={70}
                 className="rounded-lg "
               />
-              <h4 className="font-semibold">Dito bayu</h4>
+              <h4 className="font-semibold">{session?.user?.name}</h4>
             </div>
             <div className="flex flex-col py-4 px-4 md:px-8 gap-4 bg-slate-100 rounded-xl">
               <div className="flex flex-row justify-between">
