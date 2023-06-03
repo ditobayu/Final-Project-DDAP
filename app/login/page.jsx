@@ -5,12 +5,18 @@ import Cred from "@components/Cred";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 const page = () => {
   const { data: session } = useSession();
   if (session) {
     redirect("/dashboard");
   }
+  useEffect(() => {
+    if (session) {
+      redirect("/dashboard");
+    }
+  }, [session]);
   return (
     <div className="flex">
       <Nav />

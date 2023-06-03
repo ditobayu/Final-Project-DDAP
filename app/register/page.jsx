@@ -11,6 +11,11 @@ const page = () => {
   if (session) {
     redirect("/dashboard");
   }
+  useEffect(() => {
+    if (session) {
+      redirect("/dashboard");
+    }
+  }, [session]);
   return (
     <div className="flex">
       <Nav />

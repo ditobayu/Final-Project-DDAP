@@ -33,6 +33,7 @@ function Profile() {
         <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {data?.map((val) => (
             <button
+              key={val._id}
               className={`flex flex-1 flex-col justify-between border sm:border-4 bg-blue-50 rounded-lg p-2 h-24 sm:h-44 border-[#0065C1]`}
               onClick={() => {
                 setTitle(val.title);

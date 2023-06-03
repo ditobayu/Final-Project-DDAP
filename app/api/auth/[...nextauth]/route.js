@@ -12,6 +12,9 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  session: {
+    maxAge: 3 * 24 * 60 * 60,
+  },
   callbacks: {
     async session({ session }) {
       // store the user id from MongoDB to session
