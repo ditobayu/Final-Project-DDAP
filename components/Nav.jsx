@@ -62,7 +62,7 @@ const Nav = () => {
       >
         <svg
           fill="currentColor"
-          class="w-12 h-12 bg-slate-200 p-2 rounded-md"
+          className="w-12 h-12 bg-slate-200 p-2 rounded-md"
           viewBox="0 0 16 16"
         >
           <path
@@ -83,7 +83,7 @@ const Nav = () => {
           >
             <svg
               fill="currentColor"
-              class="w-12 h-12 bg-slate-100 p-2 rounded-md"
+              className="w-12 h-12 bg-slate-100 p-2 rounded-md"
               viewBox="0 0 16 16"
             >
               <path

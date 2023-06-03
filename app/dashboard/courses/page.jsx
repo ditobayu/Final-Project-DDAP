@@ -34,7 +34,7 @@ function Profile() {
           {data?.map((val) => (
             <button
               key={val._id}
-              className={`flex flex-1 flex-col justify-between border sm:border-4 bg-blue-50 rounded-lg p-2 h-24 sm:h-44 border-[#0065C1]`}
+              className={`flex flex-1 flex-col justify-between border sm:border-4 shadow-lg hover:bg-blue-100 duration-200 hover:scale-105 rounded-lg p-2 h-24 sm:h-44 border-[#0065C1]`}
               onClick={() => {
                 setTitle(val.title);
                 setDesc(val.desc);
@@ -43,7 +43,14 @@ function Profile() {
               }}
             >
               <h3 className="text-xs sm:text-sm md:text-lg">{val.title}</h3>
-              <div className="flex flex-row justify-end w-full"></div>
+              <div className="flex flex-row justify-end w-full">
+                <Image
+                  src={val.smallImage}
+                  alt="course"
+                  height={50}
+                  width={50}
+                />
+              </div>
             </button>
           ))}
         </div>
