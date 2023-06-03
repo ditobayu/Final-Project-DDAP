@@ -13,7 +13,7 @@ const page = (props) => {
   const [activeVideo, setActiveVideo] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [indexVideo, setIndexVideo] = useState(0);
+  const [indexVideo, setIndexVideo] = useState(1);
   useEffect(() => {
     fetch("/api/course/choosed", {
       headers: {
@@ -33,7 +33,7 @@ const page = (props) => {
   return (
     <div className="flex flex-col-reverse md:flex-row h-screen sm:pl-28 pt-20 pb-12">
       <div className="flex flex-col w-full md:w-4/12 lg:w-3/12 py-2 px-8 md:px-2 lg:px-8 overflow-y-scroll h-full border-4 border-slate-200 rounded-md">
-        <h3 className="font-semibold my-2 text-lg">{course.title}</h3>
+        <h3 className="font-semibold my-2 text-lg">{course?.title}</h3>
         <div className="flex flex-col gap-4">
           {course?.data?.map((val, index) => (
             <button
@@ -43,7 +43,7 @@ const page = (props) => {
                 setActiveVideo(val.video);
                 setTitle(val.title);
                 setDesc(val.desc);
-                setIndexVideo(index);
+                setIndexVideo(index + 1);
               }}
             >
               <h4>
@@ -75,9 +75,9 @@ const page = (props) => {
                 setIndexVideo((prev) =>
                   prev == course?.data.length - 1 ? 0 : prev + 1
                 );
-                setActiveVideo(course?.data[indexVideo + 1].video);
-                setTitle(course?.data[indexVideo + 1].title);
-                setDesc(course?.data[indexVideo + 1].desc);
+                setActiveVideo(course?.data[indexVideo].video);
+                setTitle(course?.data[indexVideo].title);
+                setDesc(course?.data[indexVideo].desc);
               }}
               className="greenButton py-2 px-2 text-sm sm:px-8 rounded-full duration-200 text-white"
             >
@@ -89,11 +89,6 @@ const page = (props) => {
       </div>
     </div>
   );
-  // return (
-  //   <div className="flex flex-col h-screen pl-28 pt-20 pb-12">
-  //     <Coursebar courseId={props.params.id} />
-  //   </div>
-  // );
 };
 
 export default page;

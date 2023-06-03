@@ -39,7 +39,7 @@ const Topbar = async () => {
             alt="Course Item"
           />
         </Link>
-        {/* <SignOut /> */}
+        {/* <Sign Out /> */}
       </div>
     </div>
   );
