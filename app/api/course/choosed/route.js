@@ -1,7 +1,9 @@
 import Course from "@models/Course";
+import { connectToDB } from "@utils/database";
 
 export const GET = async (request) => {
   try {
+    await connectToDB();
     const course = await Course.findById(request.headers.get("id"));
     return new Response(JSON.stringify(course), { status: 200 });
   } catch (error) {

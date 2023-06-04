@@ -3,7 +3,7 @@ import { connectToDB } from "@utils/database";
 
 export const GET = async (request) => {
   try {
-    // await connectToDB();
+    await connectToDB();
 
     const course = await Course.find();
     return new Response(JSON.stringify(course), { status: 200 });

@@ -5,22 +5,22 @@ import { useState, useEffect } from "react";
 // import CourseItem from "@components/CourseItem";
 
 function Profile() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [id, setId] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("/gada");
   useEffect(() => {
     setLoading(true);
     fetch("/api/course")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        setTitle(data[0].title);
-        setDesc(data[0].desc);
-        setId(data[0]._id);
-        setImage(data[0].image);
+        setTitle(data[0]?.title);
+        setDesc(data[0]?.desc);
+        setId(data[0]?._id);
+        setImage(data[0]?.image);
         setLoading(false);
       });
   }, []);
@@ -45,7 +45,7 @@ function Profile() {
               <h3 className="text-xs sm:text-sm md:text-lg">{val.title}</h3>
               <div className="flex flex-row justify-end w-full">
                 <Image
-                  src={val.smallImage}
+                  src={val?.smallImage}
                   alt="course"
                   height={50}
                   width={50}

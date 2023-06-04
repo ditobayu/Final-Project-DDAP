@@ -69,7 +69,7 @@ const page = (props) => {
             <button
               onClick={() => {
                 setIndexVideo((prev) =>
-                  prev == course?.data.length - 1 ? 0 : prev + 1
+                  prev >= course?.data.length - 1 ? 0 : prev + 1
                 );
                 setActiveVideo(course?.data[indexVideo].video);
                 setTitle(course?.data[indexVideo].title);
