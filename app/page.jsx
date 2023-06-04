@@ -1,7 +1,9 @@
 import Nav from "@components/Nav";
 import Image from "next/image";
+import LandingIMG from "@assets/LandingIMG.png";
 
 import React from "react";
+import Link from "next/link";
 
 export const metadata = {
   title: "Doo-IT",
@@ -12,23 +14,34 @@ const Home = () => {
   return (
     <section>
       <Nav />
-      <div className="flex flex-row pt-24">
-        <div className="w-1/2 flex flex-col h-screen pt-8 pl-12">
-          <div>
-            <h2 className="text-4xl font-semibold">Hi, Welcome to Doo-IT E-Learning!</h2>
-            <br></br>
-            <h1 className="text-8xl font-extrabold">Best IT</h1>
-            <br></br>
-            <h1 className="text-8xl font-extrabold">Online Course</h1>
-            <br></br><br></br>
-            <h2 className="text-4xl font-semibold font-sans">Doo-IT provides general knowledge to help increase your insight.</h2>
-          </div>
-          <div className="mt-8">
-            <button className="bg-green-500 text-white w-1/3 text-3xl py-4 shadow-[5px_6px_0px_rgba(3,147,0,255)] rounded-[50px] hover:w-transition duration-1000 ease-in-out">Get Started</button>
-          </div>
+      <div className="flex flex-row px-20 h-screen">
+        <div className="w-1/2 flex flex-col pt-8 gap-4  text-slate-800 justify-center">
+          <h2 className="text-2xl font-semibold">
+            Hi, Welcome to Doo-IT E-Learning!
+          </h2>
+          <h1 className="text-6xl font-black">
+            Best IT <br />
+            Online Course
+          </h1>
+          <h2 className="text-2xl font-semibold">
+            Doo-IT provides general knowledge to help <br /> increase your
+            insight.
+          </h2>
+          <Link
+            href={"/register"}
+            className="greenButton w-max py-2 px-4 rounded-full text-slate-100 duration-200 font-semibold"
+          >
+            Get Started
+          </Link>
         </div>
-        <div className="bg-slate-400 w-1/2 h-screen">
-          <img src=""></img>
+        <div className="w-1/2 items-center flex p-12">
+          <Image
+            src={LandingIMG}
+            alt="landingIMG"
+            height={1000}
+            width={1000}
+            className="w-full"
+          />
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import Image from "next/image";
 import facebook from "@assets/facebook-color-svgrepo-com.svg";
-import google from "@assets/google-color-svgrepo-com.svg";
 import twitter from "@assets/twitter-color-svgrepo-com.svg";
 import whatsapp from "@assets/whatsapp-whats-app-svgrepo-com.svg";
 import instagram from "@assets/instagram-1-svgrepo-com.svg";
@@ -15,7 +14,6 @@ import instagram from "@assets/instagram-1-svgrepo-com.svg";
 const page = () => {
   const { data: session } = useSession();
   const [isDetail, setIsDetail] = useState(false);
-  console.log(session);
   const [activeSection, setActiveSection] = useState("account");
   return (
     <div className="flex flex-col md:flex-row h-screen sm:pl-28 pt-20 pb-12 gap-4 md:gap-0">

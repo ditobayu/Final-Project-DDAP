@@ -14,7 +14,6 @@ const Cred = () => {
       setProviders(res);
     })();
   }, []);
-  console.log(providers);
   return (
     <div className="flex flex-col ">
       {providers &&

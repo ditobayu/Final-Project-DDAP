@@ -23,7 +23,6 @@ const page = (props) => {
         setTitle(data?.data[0].title);
         setDesc(data?.data[0].desc);
         // setIndexVideo((prev) => prev + 1);
-        console.log(data);
       });
   }, []);
   return (

@@ -20,11 +20,11 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex flex-row items-center fixed top-0 w-full bg-white justify-between py-4 px-8">
-      <h1 className="text-3xl font-semibold">
+    <nav className="flex flex-row items-center fixed top-0 w-full h-20 bg-white justify-between py-4 px-8 z-50">
+      <Link href={"/"} className="text-4xl font-semibold">
         <span className="text-green-400">Doo</span>-
         <span className="text-blue-400">IT</span>
-      </h1>
+      </Link>
       <div className="hidden sm:flex flex-row items-center gap-8">
         <Link href={"/dashboard"}>Home</Link>
         <Link href={"/about"}>About Us</Link>

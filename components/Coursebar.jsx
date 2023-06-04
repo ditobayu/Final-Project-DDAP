@@ -14,7 +14,6 @@ const Coursebar = ({ courseId }) => {
       .then((res) => res.json())
       .then((data) => {
         setCourse(data);
-        console.log(data);
       });
   }, []);
   return (

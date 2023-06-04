@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { useEffect } from "react";
+import thumbsup from "@assets/thumbsup.png";
 
 const page = () => {
   const { data: session } = useSession();
@@ -21,7 +22,15 @@ const page = () => {
     <div className="flex">
       <Nav />
       <div className="pt-20 w-full flex flex-row h-screen">
-        <div className="hidden md:flex w-1/2 bg-slate-300 h-full"></div>
+        <div className="hidden md:flex w-1/2 items-center p-20 relative h-full">
+          <Image
+            src={thumbsup}
+            alt="landingIMG"
+            height={1000}
+            width={1000}
+            className="w-full"
+          />
+        </div>
         <div className="flex flex-col w-full md:w-1/2 h-full p-8 sm:p-20 items-center">
           <div className="flex flex-col flex-1 items-center w-full gap-4">
             <h3 className="text-2xl font-semibold">Welcome to Doo-IT!</h3>
