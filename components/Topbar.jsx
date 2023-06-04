@@ -15,21 +15,13 @@ const Topbar = async () => {
   return (
     <div className="bg-white flex flex-row justify-between items-center fixed px-8 h-20 w-full z-30">
       <div className="flex flex-row gap-4 items-center">
-        <button className="h-12 w-12 p-2 hover:bg-slate-200 duration-300 rounded-full">
-          <svg
-            fill="currentColor"
-            className="w-full h-full"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fillRule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-        </button>
+        <Link href={"/"} className="text-4xl font-semibold">
+          <span className="text-green-400">Doo</span>-
+          <span className="text-blue-400">IT</span>
+        </Link>
       </div>
       <div className="flex flex-row gap-4 items-center">
-        <h3>Halo, {session.user.name}</h3>
+        <Link href={"/dashboard/profile"}>Halo, {session.user.name}</Link>
         <Link href={"/dashboard/profile"}>
           <Image
             className="rounded-full"
@@ -39,7 +31,6 @@ const Topbar = async () => {
             alt="Course Item"
           />
         </Link>
-        {/* <Sign Out /> */}
       </div>
     </div>
   );
