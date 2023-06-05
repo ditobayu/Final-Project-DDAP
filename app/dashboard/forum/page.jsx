@@ -60,27 +60,6 @@ const page = async () => {
             <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
               #postgresql
             </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #java
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #javascript
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #html
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #css
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #php
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #mysql
-            </span>{" "}
-            <span className="bg-slate-800 py-1 px-2 rounded-lg text-slate-100">
-              #postgresql
-            </span>{" "}
           </h3>
         </div>
       </div>
