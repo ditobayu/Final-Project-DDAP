@@ -21,7 +21,7 @@ const page = () => {
   return (
     <div className="flex">
       <Nav />
-      <div className="pt-20 w-full flex flex-row h-screen">
+      <div className="pt-20 sm:pt-8 w-full flex flex-row h-screen">
         <div className="hidden md:flex w-1/2 items-center p-20 relative h-full">
           <Image
             src={thumbsup}
@@ -31,8 +31,8 @@ const page = () => {
             className="w-full"
           />
         </div>
-        <div className="flex flex-col w-full md:w-1/2 h-full p-8 sm:p-20 items-center">
-          <div className="flex flex-col flex-1 items-center w-full gap-4">
+        <div className="flex flex-col justify-center w-full md:w-1/2 h-full p-8 sm:p-20 items-center">
+          <div className="flex flex-col items-center w-full gap-4">
             <h3 className="text-2xl font-semibold">Welcome back!!</h3>
             <p className="text-slate-500">
               Let’s continue your learning journey
@@ -43,7 +43,7 @@ const page = () => {
                 type="text"
                 name="email"
                 className="px-4 flex border-2 h-12 border-slate-400 rounded-lg"
-                placeholder="simonhohohihe@gmail.com"
+                placeholder="Simonarsaprabaswara@gmail.com"
               />
             </div>
             <div className="flex flex-col w-full">

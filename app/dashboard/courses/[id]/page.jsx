@@ -44,7 +44,6 @@ const page = (props) => {
               <h4>
                 {val.title} ({index + 1} / {course?.data?.length})
               </h4>
-              <h4>{val.title}</h4>
             </button>
           ))}
         </div>

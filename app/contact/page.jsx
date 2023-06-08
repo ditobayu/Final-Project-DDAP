@@ -3,7 +3,7 @@ import React from "react";
 import facebook from "@assets/facebook-color-svgrepo-com.svg";
 import twitter from "@assets/twitter-color-svgrepo-com.svg";
 import whatsapp from "@assets/whatsapp-whats-app-svgrepo-com.svg";
-import instagram from "@assets/instagram-1-svgrepo-com.svg";
+import ig from "@assets/ig.svg";
 import Image from "next/image";
 
 export const metadata = {
@@ -98,7 +98,7 @@ const page = () => {
               <p className="text-md font-semibold">Social media</p>
               <div className="flex flex-row items-center gap-4">
                 <Image src={facebook} height={32} width={32} alt="facebook" />
-                <Image src={instagram} height={32} width={32} alt="facebook" />
+                <Image src={ig} height={32} width={32} alt="facebook" />
                 <Image src={twitter} height={32} width={32} alt="facebook" />
                 <Image src={whatsapp} height={32} width={32} alt="facebook" />
               </div>

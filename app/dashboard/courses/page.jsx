@@ -57,17 +57,17 @@ function Profile() {
       </div>
       <div className="w-full sm:w-5/12 flex gap-4 flex-col px-8">
         <h2 className="text-3xl font-semibold">Courses Detail</h2>
-        {/* <div className="rounded-lg border-4 border-blue-300 w-full h-64"> */}
-        <Image
-          src={image}
-          alt="course"
-          height={100}
-          width={100}
-          className="w-full rounded-lg border-4 border-blue-300 h-1/3"
-        />
-        {/* </div> */}
+        <div className="rounded-lg border-4 flex items-center justify-center border-blue-300 w-full h-48">
+          <Image
+            src={image}
+            alt="course"
+            height={150}
+            width={150}
+            className=""
+          />
+        </div>
         <h3>{title}</h3>
-        <p className="flex flex-1 border-2 border-slate-400 p-4 rounded-lg overflow-y-scroll">
+        <p className="flex h-32 md:flex-1 border-2 border-slate-400 p-4 rounded-lg overflow-y-scroll">
           {desc}
         </p>
         <div className="flex justify-end ">

@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div>
       <Nav />
-      <div className="flex flex-col px-4 sm:px-12 md:px-32">
+      <div className="flex flex-col px-4 pt-20 md:pt-0 sm:px-12 md:px-32">
         <div className="md:h-screen flex items-center">
           <Image
             src={about}
@@ -23,12 +23,12 @@ const page = () => {
             className="w-full shadow-xl"
           />
         </div>
-        <div className="w-full mt-8 md:h-screen flex flex-col sm:flex-row gap-8 md:gap-20">
+        <div className="w-full mt-8 flex flex-col sm:flex-row gap-8 md:gap-20">
           <div className="w-full sm:w-1/2 flex flex-col gap-4">
             <h1 className="text-xl sm:text-4xl font-bold w-full text-center">
               About Us
             </h1>
-            <div className="text-md md:text-md p-4 font-sans">
+            <div className="text-md p-4 font-sans">
               <p>
                 This programming language learning website was founded with the
                 goal of providing quality content and free access to anyone
@@ -66,12 +66,12 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="w-full items-center flex flex-col-reverse sm:flex-row md:h-screen py-20 gap-8 md:gap-20">
+        <div className="w-full items-center flex flex-col-reverse sm:flex-row py-20 gap-8 md:gap-20">
           <div className="flex flex-col w-full">
             <h1 className="text-center py-4 text-xl sm:text-4xl font-bold">
               Our Vision
             </h1>
-            <div className=" p-4 font-sans text-xl flex flex-col gap-2">
+            <div className=" p-4 font-sans text-md flex flex-col gap-2">
               <p>
                 To assist community in learning programming languages
                 effectively and enjoyably.
@@ -92,12 +92,12 @@ const page = () => {
             />
           </div>
         </div>
-        <div className="w-full flex flex-col-reverse sm:flex-row-reverse md:h-screen py-20 gap-8 md:gap-20">
+        <div className="w-full flex flex-col-reverse sm:flex-row-reverse py-20 gap-8 md:gap-20">
           <div className="flex flex-col w-full">
             <h1 className="text-center py-4 text-xl sm:text-4xl font-bold">
               Our mission
             </h1>
-            <div className=" p-4 font-sans text-xl flex flex-col gap-4">
+            <div className=" p-4 font-sans text-md flex flex-col gap-4">
               <p>
                 Provide high-quality learning content on programming languages
                 that is easily understandable by beginners and experienced

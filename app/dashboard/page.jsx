@@ -20,8 +20,9 @@ const page = async () => {
             height={150}
             width={150}
           />
-          <div className="flex flex-col">
-            <h3>{session.user.name}</h3>
+          <div className="flex flex-col justify-center">
+            <h3 className="font-semibold text-3xl">{session.user.name}</h3>
+            <h3 className="text-slate-500 text-sm">Beginner Level</h3>
           </div>
         </div>
         <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:items-center justify-between">
@@ -37,7 +38,7 @@ const page = async () => {
               className="w-20 h-20 hover:scale-95 duration-200"
             />
             <div className="flex flex-col">
-              <h2 className="text-2xl">0</h2>
+              <h2 className="text-2xl font-semibold">0</h2>
               <h2 className="">lesson learned</h2>
             </div>
           </Link>
@@ -53,7 +54,7 @@ const page = async () => {
               className="w-20 h-20 hover:scale-95 duration-200"
             />
             <div className="flex flex-col">
-              <h2 className="text-2xl">0</h2>
+              <h2 className="text-2xl font-semibold">0</h2>
               <h2 className="">Course Finished</h2>
             </div>
           </Link>
@@ -69,7 +70,7 @@ const page = async () => {
               className="w-20 h-20 hover:scale-95 duration-200"
             />
             <div className="flex flex-col">
-              <h2 className="text-2xl">0%</h2>
+              <h2 className="text-2xl font-semibold">0%</h2>
               <h2 className="">Exercise Done</h2>
             </div>
           </Link>
@@ -84,7 +85,7 @@ const page = async () => {
       </div>
       <div className="flex flex-col sm:w-5/12 gap-4 sm:gap-8 px-4 sm:px-8 pb-24 sm:pb-0">
         <Link
-          className="bg-blue-500  text-slate-100 hover:scale-105 duration-200 hover:z-50 shadow-sm hover:shadow-blue-500 p-8 rounded-3xl gap-8 flex-col flex flex-1"
+          className="bg-blue-500  text-slate-100 hover:scale-105 duration-200 hover:z-50 shadow-sm hover:shadow-blue-500 p-8 rounded-3xl flex-col flex flex-1"
           href={"/dashboard/exercise"}
         >
           <h2 className="text-3xl font-semibold">Exercise</h2>

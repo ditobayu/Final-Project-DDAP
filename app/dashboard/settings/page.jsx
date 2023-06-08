@@ -6,7 +6,7 @@ import Image from "next/image";
 import facebook from "@assets/facebook-color-svgrepo-com.svg";
 import twitter from "@assets/twitter-color-svgrepo-com.svg";
 import whatsapp from "@assets/whatsapp-whats-app-svgrepo-com.svg";
-import instagram from "@assets/instagram-1-svgrepo-com.svg";
+import ig from "@assets/ig.svg";
 // import Link from "next/link";
 // import SignOut from "@components/SignOut";
 // import { signOut } from "next-auth/react";
@@ -20,7 +20,7 @@ const page = () => {
       <div
         className={`${
           isDetail ? "hidden md:flex" : "flex"
-        } flex-col w-full md:w-3/12 lg:w-2/12 px-4 gap-4`}
+        } flex-col w-full md:w-3/12 lg:w-2/12 gap-4`}
       >
         <h2 className="text-2xl font-semibold">Settings</h2>
         <button
@@ -206,7 +206,7 @@ const page = () => {
               <h3 className="font-semibold">SOCIAL MEDIA</h3>
               <div className="flex flex-row items-center gap-4">
                 <Image src={facebook} height={32} width={32} alt="facebook" />
-                <Image src={instagram} height={32} width={32} alt="facebook" />
+                <Image src={ig} height={32} width={32} alt="facebook" />
                 <Image src={twitter} height={32} width={32} alt="facebook" />
                 <Image src={whatsapp} height={32} width={32} alt="facebook" />
               </div>

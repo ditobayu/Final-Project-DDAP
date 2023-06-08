@@ -6,8 +6,6 @@ import CourseItem from "@components/CourseItem";
 import Link from "next/link";
 
 const page = () => {
-  // const session = await getServerSession(authOptions);
-  // const courses = await Course.find().select("title");
   const [courses, setCourses] = useState([]);
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
@@ -16,7 +14,6 @@ const page = () => {
       .then((res) => res.json())
       .then((courses) => {
         setCourses(courses);
-        setCourses([...courses, ...courses]);
         console.log(courses[0]);
         setLoading(false);
       });
