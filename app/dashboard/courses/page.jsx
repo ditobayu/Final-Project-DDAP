@@ -42,7 +42,14 @@ function Profile() {
                 setImage(val.image);
               }}
             >
-              <h3 className="text-xs sm:text-sm md:text-lg">{val.title}</h3>
+              <div className="flex flex-col">
+                <h3 className="text-xs sm:text-sm md:text-lg text-left">
+                  {val.title}
+                </h3>
+                <p className="text-sm text-slate-600 text-left hidden sm:flex">
+                  {val?.data.length} Materials
+                </p>
+              </div>
               <div className="flex flex-row justify-end w-full">
                 <Image
                   src={val?.smallImage}
