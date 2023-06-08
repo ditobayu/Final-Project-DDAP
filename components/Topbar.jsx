@@ -13,9 +13,9 @@ const Topbar = async () => {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="bg-white flex flex-row justify-between items-center fixed px-8 h-20 w-full z-30">
+    <div className="bg-white flex flex-row justify-between items-center fixed px-2 md:px-8 h-20 w-full z-30">
       <div className="flex flex-row gap-4 items-center">
-        <Link href={"/"} className="text-4xl font-semibold">
+        <Link href={"/"} className="text-2xl md:text-4xl font-semibold">
           <span className="text-green-400">Doo</span>-
           <span className="text-blue-400">IT</span>
         </Link>

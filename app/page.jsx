@@ -14,16 +14,16 @@ const Home = () => {
   return (
     <section>
       <Nav />
-      <div className="flex flex-row px-20 h-screen">
-        <div className="w-1/2 flex flex-col pt-8 gap-4  text-slate-800 justify-center">
-          <h2 className="text-2xl font-semibold">
+      <div className="flex flex-col-reverse pt-20 pb-12 md:pb-0 md:pt-0 md:flex-row px-8 md:px-20 md:h-screen">
+        <div className="w-full md:w-1/2 flex flex-col pt-8 gap-4  text-slate-800 justify-center">
+          <h2 className="text-md md:text-2xl font-semibold">
             Hi, Welcome to Doo-IT E-Learning!
           </h2>
-          <h1 className="text-6xl font-black">
+          <h1 className="text-3xl md:text-6xl font-black">
             Best IT <br />
             Online Course
           </h1>
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-md md:text-2xl font-semibold">
             Doo-IT provides general knowledge to help <br /> increase your
             insight.
           </h2>
@@ -34,7 +34,7 @@ const Home = () => {
             Get Started
           </Link>
         </div>
-        <div className="w-1/2 items-center flex p-12">
+        <div className="w-full md:w-1/2 items-center flex p-12">
           <Image
             src={LandingIMG}
             alt="landingIMG"

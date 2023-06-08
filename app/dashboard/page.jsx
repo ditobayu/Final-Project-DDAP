@@ -3,6 +3,9 @@ import Link from "next/link";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@app/api/auth/[...nextauth]/route";
 import Image from "next/image";
+import cfinish from "@assets/cfinish.svg";
+import Component4 from "@assets/Component4.svg";
+import Component6 from "@assets/Component6.svg";
 
 const page = async () => {
   const session = await getServerSession(authOptions);
@@ -22,63 +25,57 @@ const page = async () => {
           </div>
         </div>
         <div className="flex flex-col gap-4 sm:gap-0 sm:flex-row sm:items-center justify-between">
-          <div className="flex flex-row items-center gap-4">
-            <svg
-              fill="white"
-              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"
-              />
-              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-            </svg>
+          <Link
+            href={"/dashboard/courses"}
+            className="flex flex-row items-center gap-4"
+          >
+            <Image
+              src={Component4}
+              alt="Component4"
+              height={100}
+              width={100}
+              className="w-20 h-20 hover:scale-95 duration-200"
+            />
             <div className="flex flex-col">
-              <h2 className="text-2xl">14</h2>
+              <h2 className="text-2xl">0</h2>
               <h2 className="">lesson learned</h2>
             </div>
-          </div>
-          <div className="flex flex-row items-center gap-4">
-            <svg
-              fill="white"
-              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"
-              />
-              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-            </svg>
+          </Link>
+          <Link
+            href={"/dashboard/courses"}
+            className="flex flex-row items-center gap-4"
+          >
+            <Image
+              src={cfinish}
+              alt="cfinish"
+              height={100}
+              width={100}
+              className="w-20 h-20 hover:scale-95 duration-200"
+            />
             <div className="flex flex-col">
-              <h2 className="text-2xl">14</h2>
-              <h2 className="">lesson learned</h2>
+              <h2 className="text-2xl">0</h2>
+              <h2 className="">Course Finished</h2>
             </div>
-          </div>
-          <div className="flex flex-row items-center gap-4">
-            <svg
-              fill="white"
-              className="w-20 h-20 bg-slate-800 rounded-lg py-1 px-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"
-              />
-              <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-              <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-            </svg>
+          </Link>
+          <Link
+            href={"/dashboard/courses"}
+            className="flex flex-row items-center gap-4"
+          >
+            <Image
+              src={Component6}
+              alt="Component6"
+              height={100}
+              width={100}
+              className="w-20 h-20 hover:scale-95 duration-200"
+            />
             <div className="flex flex-col">
-              <h2 className="text-2xl">14</h2>
-              <h2 className="">lesson learned</h2>
+              <h2 className="text-2xl">0%</h2>
+              <h2 className="">Exercise Done</h2>
             </div>
-          </div>
+          </Link>
         </div>
         <Link
-          className="bg-slate-800 text-slate-100 p-8 rounded-3xl gap-8 h-1/2"
+          className="bg-slate-800  text-slate-100 hover:scale-105 duration-200 hover:z-50 shadow-sm hover:shadow-slate-500 p-8 rounded-3xl gap-8 h-1/2"
           href={"/dashboard/courses"}
         >
           <h2 className="text-3xl font-semibold">Courses</h2>
@@ -87,14 +84,14 @@ const page = async () => {
       </div>
       <div className="flex flex-col sm:w-5/12 gap-4 sm:gap-8 px-4 sm:px-8 pb-24 sm:pb-0">
         <Link
-          className="bg-blue-500 text-slate-100 p-8 rounded-3xl gap-8 flex-col flex flex-1"
+          className="bg-blue-500  text-slate-100 hover:scale-105 duration-200 hover:z-50 shadow-sm hover:shadow-blue-500 p-8 rounded-3xl gap-8 flex-col flex flex-1"
           href={"/dashboard/exercise"}
         >
           <h2 className="text-3xl font-semibold">Exercise</h2>
           <h3 className="text-xl">Some questions to improve your skill.</h3>
         </Link>
         <Link
-          className="bg-green-500 text-slate-100 p-8 rounded-3xl gap-8 h-1/2"
+          className="bg-green-500 text-slate-100 hover:scale-105 duration-200 hover:z-50 shadow-sm hover:shadow-green-500 p-8 rounded-3xl gap-8 h-1/2"
           href={"/dashboard/forum"}
         >
           <h2 className="text-3xl font-semibold">Discussion Forum</h2>

@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div>
       <Nav />
-      <div className="md:pt-40 flex flex-col-reverse md:flex-row pt-24 p-8 md:p-20 md:h-screen gap-8 md:gap-32">
+      <div className="md:pt-28 flex flex-col-reverse md:flex-row pt-20 p-8 md:p-20 md:h-screen gap-8 md:gap-32">
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           <h1 className="text-4xl font-bold">Talk to our team</h1>
           <h3 className="text-xl font-normal">
@@ -80,7 +80,7 @@ const page = () => {
         </div>
 
         <div className="w-full md:w-1/2 text-white text-xl">
-          <div className="gap-4 bg-gradient-to-b from-[#0266c2] to-[#93c1eb] w-full h-full rounded-2xl p-12 flex flex-col shadow-[9px_10px_0px_#b2b2b2]">
+          <div className="gap-4 bg-gradient-to-b from-[#0266c2] to-[#93c1eb] w-full h-full rounded-2xl p-12 md:p-8 flex flex-col shadow-[9px_10px_0px_#b2b2b2]">
             <h1 className="text-3xl font-bold">Get in touch</h1>
             <div className="flex flex-col ">
               <p className="text-md font-semibold">Contact us</p>
@@ -103,7 +103,7 @@ const page = () => {
                 <Image src={whatsapp} height={32} width={32} alt="facebook" />
               </div>
             </div>
-            <button className="px-4 w-max font-semibold bg-white text-[#1d77c8] py-2 shadow-[0px_4px_10px_#0065c1] hover:shadow-[0px_4px_30px_#0065c1] duration-200 hover:scale-105 rounded-[50px]">
+            <button className="text-sm px-4 w-max font-semibold bg-white text-[#1d77c8] py-2 shadow-[0px_4px_10px_#0065c1] hover:shadow-[0px_4px_30px_#0065c1] duration-200 hover:scale-105 rounded-[50px]">
               Contact now
             </button>
           </div>

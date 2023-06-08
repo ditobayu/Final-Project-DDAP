@@ -1,5 +1,6 @@
 import Course from "@models/Course";
 import Discussion from "@models/Discussion";
+import { connectToDB } from "@utils/database";
 import React from "react";
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 };
 
 const page = async () => {
+  await connectToDB();
   const discussion = await Discussion.find();
   const courses = await Course.find().select("title");
   return (

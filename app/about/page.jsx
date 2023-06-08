@@ -14,7 +14,7 @@ const page = () => {
     <div>
       <Nav />
       <div className="flex flex-col px-4 sm:px-12 md:px-32">
-        <div className="md:h-screen pt-20 flex items-center">
+        <div className="md:h-screen flex items-center">
           <Image
             src={about}
             alt="aboutImage"
@@ -28,7 +28,7 @@ const page = () => {
             <h1 className="text-xl sm:text-4xl font-bold w-full text-center">
               About Us
             </h1>
-            <div className="text-md md:text-xl p-4 font-sans">
+            <div className="text-md md:text-md p-4 font-sans">
               <p>
                 This programming language learning website was founded with the
                 goal of providing quality content and free access to anyone
@@ -50,7 +50,7 @@ const page = () => {
             <h1 className="text-xl sm:text-4xl font-bold w-full text-center">
               Our Story
             </h1>
-            <div className="text-md md:text-xl p-4 font-sans">
+            <div className="text-md md:text-md p-4 font-sans">
               <p>
                 This programming language learning website began with our
                 passion for providing accessible and high-quality education in
