@@ -14,6 +14,7 @@ export const metadata = {
 const page = async () => {
   const session = await getServerSession(authOptions);
   const courses = await Course.find();
+  console.log(courses[1].image);
   return (
     <div className="flex flex-col md:flex-row gap-4 md:gap-0 pb-20 md:pb-0 md:h-screen sm:pl-28 pt-20 ">
       <div className="flex flex-col w-full md:w-4/12 gap-4 px-8 md:px-0">
@@ -93,7 +94,7 @@ const page = async () => {
                   className={`flex w-32 h-32 flex-col items-center relative border sm:border-4 shadow-lg hover:bg-blue-100 duration-200 hover:scale-105 rounded-lg border-[#0065C1]`}
                 >
                   <Image
-                    src={val?.smallImage}
+                    src={val?.image}
                     alt="course"
                     height={50}
                     width={50}
